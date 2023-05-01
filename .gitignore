@@ -149,7 +149,7 @@ dist
 ## Please do not remove - thanks! 🙂 ##
 #####################################################
 *.sketch
-*.fig
+# *.fig
 
 # Avoid accidental XD upload if the design file is converted
 ###############################################
