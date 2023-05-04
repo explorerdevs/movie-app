@@ -1,9 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
+import * as React from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import { Providers } from './providers';
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+const container = document.getElementById('root') as HTMLElement;
+const root = createRoot(container);
+
+root.render(
   <React.StrictMode>
-    <h1>Hi</h1>
+    <Providers />
   </React.StrictMode>
 );
