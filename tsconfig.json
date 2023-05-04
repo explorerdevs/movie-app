@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2015",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "skipLibCheck": true,
@@ -17,7 +17,14 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "useDefineForClassFields": true,
+
+    /* user defined */
+    "incremental": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {"@src/*": ["./src/*"]}
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
