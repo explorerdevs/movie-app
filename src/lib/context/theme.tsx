@@ -32,14 +32,14 @@ export const ThemeProvider = ({ children }: Props) => {
 //////////////////////////////////////
 const preferDarkQuery = '(prefers-color-scheme: dark)';
 /**
- * This hook is not for the user.
- * It exists only for the theme provider
- *
+ * This hook is not for usage.
+ * It exists only for the theme provider.
+ * Please use the useTheme and useSetTheme hooks instead
  * @returns readonly [ThemeMode, React.Dispatch<React.SetStateAction<ThemeMode>>]
  */
 function useThemeMode() {
   const [mode, setMode] = React.useState<ThemeMode>(() => {
-    const value = window.localStorage.getItem('mode');
+    const value = window.localStorage.getItem('MODE');
     if (value) {
       return value === 'dark' ? 'dark' : 'light';
     }
@@ -64,8 +64,8 @@ function useThemeMode() {
   }, []);
 
   React.useEffect(() => {
-    window.localStorage.setItem('mode', mode);
-    document.documentElement.setAttribute('data-mode', mode);
+    window.localStorage.setItem('MODE', mode);
+    document.documentElement.setAttribute('data-theme', mode);
   }, [mode]);
 
   // we're doing it this way instead of as an effect so we only
