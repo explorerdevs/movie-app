@@ -31,6 +31,7 @@ export default {
       ...defaultTheme.borderRadius,
       pill: '100vmax',
     },
+   
 
     // screens: {
     //   s: "20em", // => @media (min-width: 320px) { ... }
@@ -74,6 +75,24 @@ export default {
       },
       fontFamily: {
         sans: ['Outfit'],
+      },
+      fontSize: {
+        100: '1rem',
+        200: '1.3rem',
+        300: '1.5rem',
+        400: '1.8rem',
+        500: '2rem',
+        600: '2.4rem',
+        700: '2.8rem',
+        800: '3rem',
+        900: '3.2rem',
+      },
+      lineHeight: {
+        6: '1.6rem',
+        7: '1.9rem',
+        9: '2.3rem',
+        11: '3rem',
+        12: '4rem',
       },
       cursor: {
         pointer:
