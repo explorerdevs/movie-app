@@ -22,10 +22,10 @@ export const TV_SERIES: Record<string, string> = {
   POPULAR: 'popular',
   TOP_RATED: 'top_rated',
   ON_THE_AIR: 'on_the_air',
-} satisfies Record<string, string>;
+} 
 
 export const MOVIE: Record<string, string> = {
   UPCOMING: 'upcoming',
   POPULAR: 'popular',
   TOP_RATED: 'top_rated',
-} satisfies Record<string, string>;
+}
