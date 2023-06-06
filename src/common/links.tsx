@@ -1,5 +1,5 @@
 import {
-  IconBookmarkSVG,
+  IconBookmarkFullSVG,
   IconHomeSVG,
   IconMovieSVG,
   IconTvSVG,
@@ -29,7 +29,7 @@ export const routes: IRoutesProps = [
   {
     alt: 'bookmarks',
     href: '/bookmarks',
-    icon: (props) => <IconBookmarkSVG {...props} />,
+    icon: (props) => <IconBookmarkFullSVG {...props} />,
   },
 ];
 
