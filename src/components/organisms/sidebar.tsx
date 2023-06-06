@@ -1,4 +1,5 @@
 import { icons, routes } from '@src/common';
+import { cx } from 'class-variance-authority';
 import { NavLink } from 'react-router-dom';
 
 interface Props {}
@@ -19,8 +20,11 @@ const Sidebar = (props: Props) => {
         <ul className='flex items-center justify-between gap-8'>
           {routes.map((route) => (
             <li key={route.alt}>
-              <NavLink to={route.href}>
-                <route.icon />
+              <NavLink
+                to={route.href}
+                className={cx('flex items-center justify-center')}
+              >
+                <route.icon width={20} height={20} />
                 <span className='sr-only'>{route.alt}</span>
               </NavLink>
             </li>
