@@ -1,8 +1,4 @@
-import LogoSVG from '../../assets/logo.svg';
-import HomeSVG from '../../assets/icon-nav-home.svg';
-import MovieSVG from '../../assets/icon-nav-movies.svg';
-import TvSVG from '../../assets/icon-nav-tv-series.svg';
-import BookmarkSVG from '../../assets/icon-bookmark-full.svg';
+import { icons, routes } from '@src/common';
 import { NavLink } from 'react-router-dom';
 
 interface Props {}
@@ -15,31 +11,22 @@ const Sidebar = (props: Props) => {
       <div className='flex items-center justify-between p-6'>
         <div className='aspect-square w-10'>
           <NavLink to='/'>
-            <LogoSVG />
+            {/* <LogoSVG /> */}
+            <icons.logo />
           </NavLink>
         </div>
+
         <ul className='flex items-center justify-between gap-8'>
-          <li>
-            <NavLink to='/'>
-              <HomeSVG />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='/movies'>
-              <MovieSVG />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='/series'>
-              <TvSVG />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='/bookmarks'>
-              <BookmarkSVG />
-            </NavLink>
-          </li>
+          {routes.map((route) => (
+            <li key={route.alt}>
+              <NavLink to={route.href}>
+                <route.icon />
+                <span className='sr-only'>{route.alt}</span>
+              </NavLink>
+            </li>
+          ))}
         </ul>
+
         <div className='w-10 rounded-full border border-white'>
           <img src={avatar.href} alt='avatar' />
         </div>
