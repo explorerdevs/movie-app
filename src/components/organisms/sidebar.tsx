@@ -2,9 +2,7 @@ import { icons, routes } from '@src/common';
 import { cx } from 'class-variance-authority';
 import { NavLink } from 'react-router-dom';
 
-interface Props {}
-
-const Sidebar = (props: Props) => {
+const Sidebar = () => {
   const avatar = new URL('../../assets/image-avatar.png', import.meta.url);
 
   return (

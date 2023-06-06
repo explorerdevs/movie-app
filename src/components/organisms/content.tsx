@@ -1,8 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
-interface Props {}
-
-const PageContent = (props: Props) => {
+const PageContent = () => {
   return (
     <main className=''>
       <Outlet />

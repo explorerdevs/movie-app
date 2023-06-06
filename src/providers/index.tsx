@@ -5,9 +5,7 @@ import { RouterProvider } from 'react-router-dom';
 import { ThemeProvider } from '../lib';
 import { router } from '../routes';
 
-interface Props {}
-
-const Providers = (props: Props) => {
+const Providers = () => {
   const [client] = React.useState(
     () =>
       new QueryClient({

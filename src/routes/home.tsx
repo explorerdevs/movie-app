@@ -1,8 +1,6 @@
 import { HomeTemplate } from '../components';
 
-interface Props {}
-
-const HomeRoute = (props: Props) => {
+const HomeRoute = () => {
   return <HomeTemplate />;
 };
 

@@ -1,14 +1,12 @@
 import { PageContent, Sidebar } from '../organisms';
 
-interface Props {}
-
-const Layout = (props: Props) => {
+function RootLayout() {
   return (
     <div className=''>
       <Sidebar />
       <PageContent />
     </div>
   );
-};
+}
 
-export { Layout };
+export { RootLayout };
