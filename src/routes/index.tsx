@@ -19,5 +19,6 @@ export const router = createBrowserRouter(
         <Route path='*' element={<h1>Error Page</h1>} />
       </Route>
     </Route>
-  )
+  ),
+  { basename: import.meta.env.DEV ? '/' : '/movie-app/' }
 );
