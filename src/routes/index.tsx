@@ -4,13 +4,14 @@ import {
   Route,
 } from 'react-router-dom';
 import { DesignPage, Layout } from '../components';
+import { LoginRoute, RegisterRoute } from './auth';
 import { HomeRoute } from './home';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/'>
-      <Route path='login' element={<h1>Login Page</h1>} />
-      <Route path='register' element={<h1>Register Page</h1>} />
+      <Route path='login' element={<LoginRoute />} />
+      <Route path='register' element={<RegisterRoute />} />
       <Route path='design' element={<DesignPage />} />
 
       <Route element={<Layout />}>
