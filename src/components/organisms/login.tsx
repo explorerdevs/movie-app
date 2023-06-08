@@ -5,6 +5,8 @@ import { Text } from '../atoms';
 import { FormField } from '../molecules';
 
 const LoginForm = () => {
+  // const navigate = useNavigate();
+
   const methods = useZodForm({
     schema: LoginFormSchema,
     mode: 'onChange',
@@ -21,6 +23,7 @@ const LoginForm = () => {
       // send data to api
       console.log(data);
       // methods.reset();
+      // navigate('/', { replace: true });
     } catch (error) {
       console.error('LOGIN_ERROR', error);
     }
@@ -49,6 +52,7 @@ const LoginForm = () => {
           />
 
           <FormField
+            type='password'
             name='password'
             label={'Password'}
             className=''
