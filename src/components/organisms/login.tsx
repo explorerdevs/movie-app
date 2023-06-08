@@ -1,11 +1,11 @@
 import { LoginFormSchema, RHFSubmitHandler, useZodForm } from '@src/lib';
 import { FormProvider } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Text } from '../atoms';
 import { FormField } from '../molecules';
 
 const LoginForm = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const methods = useZodForm({
     schema: LoginFormSchema,

@@ -10,6 +10,7 @@ import { Text } from '../atoms';
 import { FormField } from '../molecules';
 
 const RegisterForm = () => {
+  // const navigate = useNavigate()
   const methods = useZodForm({
     schema: RegisterFormSchema,
     mode: 'onChange',
@@ -25,6 +26,7 @@ const RegisterForm = () => {
       // send data to api
       console.log(data);
       // methods.reset();
+      // navigate('/login')
     } catch (error) {
       console.error('LOGIN_ERROR', error);
     }
