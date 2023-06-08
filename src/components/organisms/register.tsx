@@ -50,6 +50,7 @@ const RegisterForm = () => {
           />
 
           <FormField
+            type='password'
             name='password'
             label={'Password'}
             className='col-span-6'
@@ -58,6 +59,7 @@ const RegisterForm = () => {
           />
 
           <FormField
+            type='password'
             name='countersign'
             label={'Confirm Password'}
             className=''
