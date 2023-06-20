@@ -1,9 +1,4 @@
-import {
-  LoginFormSchema,
-  RHFSubmitHandler,
-  RegisterFormSchema,
-  useZodForm,
-} from '@src/lib';
+import { RHFSubmitHandler, RegisterFormSchema, useZodForm } from '@src/lib';
 import { FormProvider } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { Text } from '../atoms';
@@ -16,7 +11,9 @@ const RegisterForm = () => {
     mode: 'onChange',
   });
 
-  const onSubmit: RHFSubmitHandler<typeof LoginFormSchema> = async (data) => {
+  const onSubmit: RHFSubmitHandler<typeof RegisterFormSchema> = async (
+    data
+  ) => {
     try {
       const result = RegisterFormSchema.safeParse(data);
       // The data is invalid
