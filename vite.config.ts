@@ -7,7 +7,7 @@ export default defineConfig(({ command }) => {
   return {
     plugins: [react(), svgr({ exportAsDefault: true })],
     server: { port: 3000, open: true },
-    resolve: { alias: [{ find: '@src', replacement: '/src/' }] },
+    resolve: { alias: [{ find: '@/', replacement: '/src/' }] },
     base: command !== 'serve' ? '/movie-app/' : '/',
   };
 });

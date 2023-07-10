@@ -24,7 +24,7 @@
     "incremental": true,
     "allowJs": true,
     "baseUrl": ".",
-    "paths": { "@src/*": ["./src/*"] }
+    "paths": { "@/*": ["./src/*"] }
   },
   "include": ["src/vite-env.d.ts", "src/**/*.ts", "src/**/*.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]

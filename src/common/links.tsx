@@ -1,9 +1,15 @@
 import {
   IconBookmarkFullSVG,
-  IconHomeSVG,
-  IconMovieSVG,
-  IconTvSVG,
+  IconNavHomeSVG,
+  IconNavMovieSVG,
+  IconNavTvSVG,
   LogoSVG,
+  IconSearchSVG,
+  IconPlaySVG,
+  AvatarPNG,
+  IconCategoryMovieSVG,
+  IconCategoryTvSVG,
+  IconNavBookmarkSVG,
 } from './assets';
 
 export const icons = {
@@ -14,22 +20,22 @@ export const routes: IRoutesProps = [
   {
     alt: 'home',
     href: '/',
-    icon: (props) => <IconHomeSVG {...props} />,
+    icon: (props) => <IconNavHomeSVG {...props} />,
   },
   {
     alt: 'movies',
     href: '/movies',
-    icon: (props) => <IconMovieSVG {...props} />,
+    icon: (props) => <IconNavMovieSVG {...props} />,
   },
   {
     alt: 'series',
     href: '/series',
-    icon: (props) => <IconTvSVG {...props} />,
+    icon: (props) => <IconNavTvSVG {...props} />,
   },
   {
     alt: 'bookmarks',
     href: '/bookmarks',
-    icon: (props) => <IconBookmarkFullSVG {...props} />,
+    icon: (props) => <IconNavBookmarkSVG {...props} />,
   },
 ];
 

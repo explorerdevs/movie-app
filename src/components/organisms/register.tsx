@@ -1,4 +1,4 @@
-import { RHFSubmitHandler, RegisterFormSchema, useZodForm } from '@src/lib';
+import { RHFSubmitHandler, RegisterFormSchema, useZodForm } from '@/lib';
 import { FormProvider } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { Text } from '../atoms';
