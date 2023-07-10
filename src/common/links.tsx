@@ -1,22 +1,34 @@
 import {
   IconBookmarkFullSVG,
+  IconCategoryMovieSVG,
+  IconCategoryTvSVG,
+  IconLogoSVG,
+  IconNavBookmarkSVG,
   IconNavHomeSVG,
   IconNavMovieSVG,
   IconNavTvSVG,
-  LogoSVG,
-  IconSearchSVG,
   IconPlaySVG,
-  AvatarPNG,
-  IconCategoryMovieSVG,
-  IconCategoryTvSVG,
-  IconNavBookmarkSVG,
 } from "./assets";
 
-export const icons = {
-  logo: LogoSVG,
-};
+type IconObject = "site" | "category" | "bookmark";
 
-export const routes: IRoutesProps = [
+export const icons = {
+  site: {
+    logo: (props) => <IconLogoSVG {...props} />,
+    play: (props) => <IconPlaySVG {...props} />,
+    search: (props) => <IconLogoSVG {...props} />,
+  },
+  bookmark: {
+    empty: (props) => <IconBookmarkFullSVG {...props} />,
+    full: (props) => <IconLogoSVG {...props} />,
+  },
+  category: {
+    movie: (props) => <IconCategoryMovieSVG {...props} />,
+    series: (props) => <IconCategoryTvSVG {...props} />,
+  },
+} satisfies Record<IconObject, Record<string, IconRFCType>>;
+
+export const routes = [
   {
     alt: "home",
     href: "/",
@@ -37,8 +49,4 @@ export const routes: IRoutesProps = [
     href: "/bookmarks",
     icon: (props) => <IconNavBookmarkSVG {...props} />,
   },
-];
-
-// movie: ,
-// bookmark: IconBookmarkSVG,
-// series:
+] satisfies IRoutesProps;
