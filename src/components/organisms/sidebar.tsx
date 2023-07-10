@@ -1,4 +1,4 @@
-import { icons, routes } from '@src/common';
+import { icons, routes } from '@/common';
 import { cx } from 'class-variance-authority';
 import { NavLink } from 'react-router-dom';
 
@@ -22,7 +22,7 @@ const Sidebar = () => {
                 to={route.href}
                 className={cx('flex items-center justify-center')}
               >
-                <route.icon width={20} height={20} />
+                <route.icon />
                 <span className='sr-only'>{route.alt}</span>
               </NavLink>
             </li>

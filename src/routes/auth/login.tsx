@@ -1,4 +1,4 @@
-import { AuthFormTemplate, LoginForm } from '@src/components';
+import { AuthFormTemplate, LoginForm } from '@/components';
 
 const LoginRoute = () => {
   return (
