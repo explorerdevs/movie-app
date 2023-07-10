@@ -10,7 +10,7 @@ import {
   IconCategoryMovieSVG,
   IconCategoryTvSVG,
   IconNavBookmarkSVG,
-} from './assets';
+} from "./assets";
 
 export const icons = {
   logo: LogoSVG,
@@ -18,23 +18,23 @@ export const icons = {
 
 export const routes: IRoutesProps = [
   {
-    alt: 'home',
-    href: '/',
+    alt: "home",
+    href: "/",
     icon: (props) => <IconNavHomeSVG {...props} />,
   },
   {
-    alt: 'movies',
-    href: '/movies',
+    alt: "movies",
+    href: "/movies",
     icon: (props) => <IconNavMovieSVG {...props} />,
   },
   {
-    alt: 'series',
-    href: '/series',
+    alt: "series",
+    href: "/series",
     icon: (props) => <IconNavTvSVG {...props} />,
   },
   {
-    alt: 'bookmarks',
-    href: '/bookmarks',
+    alt: "bookmarks",
+    href: "/bookmarks",
     icon: (props) => <IconNavBookmarkSVG {...props} />,
   },
 ];

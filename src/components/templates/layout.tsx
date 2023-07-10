@@ -1,8 +1,8 @@
-import { PageContent, Sidebar } from '../organisms';
+import { PageContent, Sidebar } from "../organisms";
 
 function RootLayout() {
   return (
-    <div className=''>
+    <div className="">
       <Sidebar />
       <PageContent />
     </div>

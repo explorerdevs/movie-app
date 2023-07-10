@@ -1,3 +1,3 @@
-import { createQueryKeys } from '@lukemorales/query-key-factory';
+import { createQueryKeys } from "@lukemorales/query-key-factory";
 
-export const series = createQueryKeys('series', {});
+export const series = createQueryKeys("series", {});

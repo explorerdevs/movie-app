@@ -1,3 +1,3 @@
-import { createQueryKeys } from '@lukemorales/query-key-factory';
+import { createQueryKeys } from "@lukemorales/query-key-factory";
 
-export const movies = createQueryKeys('movies', {});
+export const movies = createQueryKeys("movies", {});

@@ -1,4 +1,4 @@
-import { AuthFormTemplate, RegisterForm } from '@/components';
+import { AuthFormTemplate, RegisterForm } from "@/components";
 
 const RegisterRoute = () => {
   return (

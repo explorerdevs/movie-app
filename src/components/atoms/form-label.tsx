@@ -1,5 +1,5 @@
-import clsx from 'clsx';
-import * as React from 'react';
+import clsx from "clsx";
+import * as React from "react";
 
 interface Props
   extends React.DetailedHTMLProps<
@@ -9,7 +9,7 @@ interface Props
 
 const FormLabel = ({ className, children, ...rest }: Props) => {
   return (
-    <label className={clsx('body-100', className)} {...rest}>
+    <label className={clsx("body-100", className)} {...rest}>
       {children}
     </label>
   );

@@ -1,5 +1,5 @@
-import clsx from 'clsx';
-import { useFormContext } from 'react-hook-form';
+import clsx from "clsx";
+import { useFormContext } from "react-hook-form";
 
 interface Props
   extends React.DetailedHTMLProps<
@@ -18,11 +18,11 @@ const FormInput = ({ name, className, type, ...rest }: Props) => {
   return (
     <input
       {...register(`${name}`, {
-        valueAsNumber: type === 'number' || undefined,
+        valueAsNumber: type === "number" || undefined,
       })}
-      className={clsx('peer w-full border px-8 py-6 ', className)}
+      className={clsx("peer w-full border px-8 py-6 ", className)}
       type={type}
-      aria-invalid={errors?.[name] ? 'true' : 'false'}
+      aria-invalid={errors?.[name] ? "true" : "false"}
       aria-errormessage={`errors-${name}`}
       {...rest}
     />
