@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { off, on } from '../utils';
+import * as React from "react";
+import { off, on } from "../utils";
 
-type ThemeMode = 'dark' | 'light';
+type ThemeMode = "dark" | "light";
 type ThemeState = ReturnType<typeof useThemeMode>[0] | null;
 type SetThemeState = ReturnType<typeof useThemeMode>[1] | null;
 
@@ -30,7 +30,7 @@ export const ThemeProvider = ({ children }: Props) => {
 ////////////////////////////////////////
 ////                              /////
 //////////////////////////////////////
-const preferDarkQuery = '(prefers-color-scheme: dark)';
+const preferDarkQuery = "(prefers-color-scheme: dark)";
 /**
  * This hook is not for usage.
  * It exists only for the theme provider.
@@ -39,12 +39,12 @@ const preferDarkQuery = '(prefers-color-scheme: dark)';
  */
 function useThemeMode() {
   const [mode, setMode] = React.useState<ThemeMode>(() => {
-    const value = window.localStorage.getItem('MODE');
+    const value = window.localStorage.getItem("MODE");
     if (value) {
-      return value === 'dark' ? 'dark' : 'light';
+      return value === "dark" ? "dark" : "light";
     }
 
-    return window.matchMedia(preferDarkQuery).matches ? 'dark' : 'light';
+    return window.matchMedia(preferDarkQuery).matches ? "dark" : "light";
   });
 
   React.useEffect(() => {
@@ -52,20 +52,20 @@ function useThemeMode() {
 
     const handler = () => {
       if (!isMounted) return;
-      setMode(window.matchMedia(preferDarkQuery).matches ? 'dark' : 'light');
+      setMode(window.matchMedia(preferDarkQuery).matches ? "dark" : "light");
     };
 
-    on(window, 'change', handler);
+    on(window, "change", handler);
 
     return () => {
       isMounted = false;
-      off(window, 'change', handler);
+      off(window, "change", handler);
     };
   }, []);
 
   React.useEffect(() => {
-    window.localStorage.setItem('MODE', mode);
-    document.documentElement.setAttribute('data-theme', mode);
+    window.localStorage.setItem("MODE", mode);
+    document.documentElement.setAttribute("data-theme", mode);
   }, [mode]);
 
   // we're doing it this way instead of as an effect so we only

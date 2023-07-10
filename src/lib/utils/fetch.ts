@@ -1,8 +1,11 @@
-export function fetcher<TData, TVariables>(query: string, variables?: TVariables) {
+export function fetcher<TData, TVariables>(
+  query: string,
+  variables?: TVariables
+) {
   return async (): Promise<TData> => {
     const response = await fetch("", {
-    method: "POST",
-    ...({"headers":{"Content-Type":"application/json"}}),
+      method: "POST",
+      ...{ headers: { "Content-Type": "application/json" } },
       body: JSON.stringify({ query, variables }),
     });
 
@@ -15,5 +18,5 @@ export function fetcher<TData, TVariables>(query: string, variables?: TVariables
     }
 
     return json.data;
-  }
+  };
 }

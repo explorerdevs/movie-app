@@ -1,4 +1,4 @@
-interface IconProps extends React.ComponentPropsWithoutRef<'svg'> {}
+interface IconProps extends React.ComponentPropsWithoutRef<"svg"> {}
 
 type $ElementProps<E extends React.ElementType<any>> = {
   children: React.ReactNode;
@@ -8,7 +8,7 @@ type $ElementProps<E extends React.ElementType<any>> = {
 type ElementProps<E extends React.ElementType<any>> = $ElementProps<E> &
   Omit<React.ComponentPropsWithoutRef<E>, keyof $ElementProps<E>>;
 
-interface IconProps extends React.ComponentPropsWithoutRef<'svg'> {}
+interface IconProps extends React.ComponentPropsWithoutRef<"svg"> {}
 
 type PropsFrom<T> = T extends React.FC<infer Props>
   ? Props

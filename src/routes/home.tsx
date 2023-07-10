@@ -1,4 +1,4 @@
-import { HomeTemplate } from '../components';
+import { HomeTemplate } from "../components";
 
 const HomeRoute = () => {
   return <HomeTemplate />;

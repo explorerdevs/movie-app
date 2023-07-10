@@ -1,4 +1,5 @@
-# Basic set up for package managers
+# Basic set up for three package managers
+
 version: 2
 updates:
   # Maintain dependencies for GitHub Actions
@@ -9,7 +10,7 @@ updates:
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
     commit-message:
@@ -34,4 +35,3 @@ updates:
     # Add assignees
     assignees:
       - "princemuel"
-      - "jolene"

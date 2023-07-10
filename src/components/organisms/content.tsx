@@ -1,8 +1,8 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
 
 const PageContent = () => {
   return (
-    <main className=''>
+    <main className="">
       <Outlet />
     </main>
   );
