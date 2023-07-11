@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 // const avatar = new URL("../../assets/image-avatar.png", import.meta.url);
 const Sidebar = () => {
   return (
-    <aside className="sticky top-8 m-8 bg-brand-200 lg:flex-col">
+    <aside className="sticky top-8 m-8 flex flex-row bg-brand-200 lg:flex-col">
       <div className="flex items-center justify-between p-6">
         <div className="aspect-square w-10">
           <NavLink to="/">
