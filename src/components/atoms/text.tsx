@@ -5,7 +5,7 @@ import { cva } from "cva";
 const textVariants = cva("", {
   defaultVariants: {
     color: "primary",
-    size: "sm",
+    size: "s",
     weight: "light",
   },
   variants: {
@@ -15,12 +15,14 @@ const textVariants = cva("", {
       "primary/50": "text-white/50",
     },
     size: {
-      sx: "",
-      sm: "text-200",
-      md: "text-300",
-      lg: "text-700",
-      xl: "text-800",
-      "2xl": "text-900 tracking-tighter",
+      sx: "text-100",
+      s: "text-200",
+      sm: "text-300",
+      md: "text-400",
+      lg: "text-600",
+      xl: "text-700",
+      "2xl": "text-800",
+      "3xl": "text-900 tracking-tighter",
     },
     weight: {
       bold: "font-bold",
