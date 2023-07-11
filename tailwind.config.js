@@ -52,7 +52,7 @@ export default {
         "2xl": "96em", // @media (min-width: 1536px) { ... }
       },
       fontFamily: {
-        sans: ["Outfit"],
+        sans: ["Outfit", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         100: "1rem",

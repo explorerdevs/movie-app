@@ -4,46 +4,32 @@ import { cva } from "cva";
 
 const textVariants = cva("", {
   defaultVariants: {
-    variant: "primary",
-    size: "base",
-    weight: "medium",
+    color: "primary",
+    size: "sm",
+    weight: "light",
   },
   variants: {
-    variant: {
-      primary: "text-black",
-      "primary/50": "text-black/50",
-      inverted: "text-white",
-      secondary: "text-brand-500",
+    color: {
+      primary: "text-white",
+      "primary/75": "text-white/75",
+      "primary/50": "text-white/50",
     },
     size: {
-      xs: "text-200 tracking-100",
-      sx: "text-300 tracking-700",
-      base: "text-400 leading-300",
-      sm: "text-500 tracking-300",
-      md: "text-600 tracking-500",
-      lg: "text-700 tracking-600",
-      xl: "text-800 tracking-200",
-      "2xl": "text-900 tracking-400",
-      "3xl": "text-xl tracking-600",
+      sx: "",
+      sm: "text-200",
+      md: "text-300",
+      lg: "text-700",
+      xl: "text-800",
+      "2xl": "text-900 tracking-tighter",
     },
-
     weight: {
       bold: "font-bold",
       medium: "font-medium",
       regular: "font-normal",
-    },
-    uppercase: {
-      true: "uppercase",
+      light: "font-light",
     },
   },
-  compoundVariants: [
-    {
-      variant: ["primary", "secondary", "inverted"],
-      size: ["3xl", "2xl", "xl", "lg", "md", "sm", "sx", "xs"],
-      weight: "bold",
-      class: "uppercase",
-    },
-  ],
+  compoundVariants: [],
 });
 
 interface TextVariants extends VariantProps<typeof textVariants> {}
@@ -53,9 +39,23 @@ const text = (variants: TextVariants, className = "") =>
 type TextProps<E extends React.ElementType = "p"> = ElementProps<E> &
   TextVariants;
 
+/**
+ * This text component can be used for all text-based elements
+ * such as headings, paragraphs, spans, abbreviations etc.
+ *
+ * @example
+ * <Text as="h3">
+ *   Hey, you gotta do some writing. The world can't wait to hear from you.
+ * </Text>
+ * @example
+ * <Text as="p">
+ *   Well, no one knows what it means but it's provocative...
+ *   and keeps the people going
+ * </Text>
+ */
 const Text = <E extends React.ElementType = "p">({
   as: As,
-  variant,
+  color,
   weight,
   size,
   uppercase,
@@ -66,10 +66,7 @@ const Text = <E extends React.ElementType = "p">({
   const Rendered = As || "p";
 
   return (
-    <Rendered
-      className={text({ variant, weight, size, uppercase }, className)}
-      {...rest}
-    >
+    <Rendered className={text({ color, weight, size }, className)} {...rest}>
       {children}
     </Rendered>
   );

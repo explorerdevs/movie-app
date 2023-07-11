@@ -20,7 +20,7 @@ const ResponsiveImage = ({
   imageClassName,
   ...rest
 }: Props) => (
-  <figure className={cn("w-full", className)}>
+  <figure className={cn(className)}>
     <img
       src={src}
       alt={alt}
