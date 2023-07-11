@@ -9,7 +9,13 @@ interface Props
 
 const FormLabel = ({ className, children, ...rest }: Props) => {
   return (
-    <label className={cn("body-100", className)} {...rest}>
+    <label
+      className={cn(
+        "max-h-1 font-light text-neutral-100 opacity-50",
+        className
+      )}
+      {...rest}
+    >
       {children}
     </label>
   );

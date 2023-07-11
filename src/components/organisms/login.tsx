@@ -1,3 +1,4 @@
+import { IconLogoSVG } from "@/common";
 import { LoginFormSchema, RHFSubmitHandler, useZodForm } from "@/lib";
 import { FormProvider } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -33,48 +34,60 @@ const LoginForm = () => {
     Boolean(methods.formState.isDirty) && Boolean(methods.formState.isValid);
 
   return (
-    <FormProvider {...methods}>
-      <form
-        className="w-full max-w-[40rem]"
-        onSubmit={methods.handleSubmit(onSubmit)}
-      >
-        <fieldset className="">
-          <Text as="legend" className="">
-            Login
-          </Text>
+    <div className="mx-0 flex grow flex-col mt-10">
+      <IconLogoSVG className="m-auto mb-10" />
+      <FormProvider {...methods}>
+        <form
+          className="m-auto flex w-full max-w-[40rem] grow gap-10 rounded-2xl bg-brand-200 p-7"
+          onSubmit={methods.handleSubmit(onSubmit)}
+        >
+          <fieldset className="flex grow flex-col">
+            <Text as="legend" className="mb-8 text-500">
+              Login
+            </Text>
 
-          <FormField
-            type="email"
-            name="email"
-            label={"Email Address"}
-            className=""
-            autoComplete="username"
-          />
+            <FormField
+              type="email"
+              name="email"
+              label={"Email Address"}
+              className="py-0 text-100"
+              autoComplete="username"
+            />
 
-          <FormField
-            type="password"
-            name="password"
-            label={"Password"}
-            className=""
-            autoComplete="current-password"
-            isPassword
-          />
+            <FormField
+              type="password"
+              name="password"
+              label={"Password"}
+              className="py-3 text-100"
+              autoComplete="current-password"
+              isPassword
+            />
 
-          <div className="">
-            <button type="submit" disabled={!isSubmittable} className="">
-              Login to your account
-            </button>
-          </div>
+            <div className="">
+              <button
+                type="submit"
+                disabled={!isSubmittable}
+                className="mt-8 min-w-full rounded-md bg-accent-200 p-3 font-light text-neutral-100"
+              >
+                Login to your account
+              </button>
+            </div>
 
-          <div className="">
-            <Text>Don’t have an account?</Text>
-            <Link to="/register" className="">
-              Sign Up
-            </Link>
-          </div>
-        </fieldset>
-      </form>
-    </FormProvider>
+            <div className="mt-8 flex justify-center gap-2">
+              <Text className="text-100 font-light">
+                Don’t have an account?
+              </Text>
+              <Link
+                to="/register"
+                className="text-100 font-light text-accent-200"
+              >
+                Sign Up
+              </Link>
+            </div>
+          </fieldset>
+        </form>
+      </FormProvider>
+    </div>
   );
 };
 
