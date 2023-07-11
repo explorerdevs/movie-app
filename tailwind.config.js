@@ -9,6 +9,7 @@ export default {
     borderRadius: {
       ...defaultTheme.borderRadius,
       pill: "100vmax",
+      brand: "0.8rem",
     },
 
     // screens: {
