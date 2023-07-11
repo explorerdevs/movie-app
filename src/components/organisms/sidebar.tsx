@@ -1,5 +1,5 @@
 import { AvatarPNG, icons, routes } from "@/common";
-import { cx } from "class-variance-authority";
+import { cn } from "@/lib";
 import { NavLink } from "react-router-dom";
 
 // Leaving this for legacy purposes :)
@@ -10,7 +10,6 @@ const Sidebar = () => {
       <div className="flex items-center justify-between p-6">
         <div className="aspect-square w-10">
           <NavLink to="/">
-            {/* <LogoSVG /> */}
             <icons.site.logo />
           </NavLink>
         </div>
@@ -20,9 +19,14 @@ const Sidebar = () => {
             <li key={route.alt}>
               <NavLink
                 to={route.href}
-                className={cx("flex items-center justify-center")}
+                className={({ isActive }) =>
+                  cn(
+                    "flex items-center justify-center",
+                    isActive && "text-white"
+                  )
+                }
               >
-                <route.icon />
+                <route.icon className="fill-current" />
                 <span className="sr-only">{route.alt}</span>
               </NavLink>
             </li>
