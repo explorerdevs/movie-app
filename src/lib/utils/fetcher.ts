@@ -1,8 +1,6 @@
 export async function request(
   ...args: Parameters<typeof fetch>
 ): Promise<unknown> {
-  try {
-  } catch (error) {}
   const response = await fetch(...args);
 
   if (!response.ok) {
