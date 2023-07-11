@@ -1,5 +1,5 @@
-import clsx from 'clsx';
-import { useFormContext } from 'react-hook-form';
+import { cn } from "@/lib";
+import { useFormContext } from "react-hook-form";
 
 interface Props
   extends React.DetailedHTMLProps<
@@ -10,7 +10,7 @@ interface Props
 }
 
 const FormErrorText = ({
-  id = '',
+  id = "",
   message,
   className,
   children,
@@ -22,16 +22,16 @@ const FormErrorText = ({
 
   return (
     <span
-      role='alert'
+      role="alert"
       id={`errors-${id}`}
-      aria-live='assertive'
-      className={clsx(
-        'text-200 font-semibold leading-tight tracking-tighter',
+      aria-live="assertive"
+      className={cn(
+        "text-200 font-semibold leading-tight tracking-tighter",
         className
       )}
       {...rest}
     >
-      {children || message || `${errors?.[id]?.message || ''}`}
+      {children || message || `${errors?.[id]?.message || ""}`}
     </span>
   );
 };

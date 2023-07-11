@@ -1,13 +1,15 @@
-import { LoginFormSchema, RHFSubmitHandler, useZodForm } from '@src/lib';
-import { FormProvider } from 'react-hook-form';
-import { Link } from 'react-router-dom';
-import { Text } from '../atoms';
-import { FormField } from '../molecules';
+import { LoginFormSchema, RHFSubmitHandler, useZodForm } from "@/lib";
+import { FormProvider } from "react-hook-form";
+import { Link } from "react-router-dom";
+import { Text } from "../atoms";
+import { FormField } from "../molecules";
 
 const LoginForm = () => {
+  // const navigate = useNavigate();
+
   const methods = useZodForm({
     schema: LoginFormSchema,
-    mode: 'onChange',
+    mode: "onChange",
   });
 
   const onSubmit: RHFSubmitHandler<typeof LoginFormSchema> = async (data) => {
@@ -21,8 +23,9 @@ const LoginForm = () => {
       // send data to api
       console.log(data);
       // methods.reset();
+      // navigate('/', { replace: true });
     } catch (error) {
-      console.error('LOGIN_ERROR', error);
+      console.error("LOGIN_ERROR", error);
     }
   };
 
@@ -32,39 +35,40 @@ const LoginForm = () => {
   return (
     <FormProvider {...methods}>
       <form
-        className='w-full max-w-[40rem]'
+        className="w-full max-w-[40rem]"
         onSubmit={methods.handleSubmit(onSubmit)}
       >
-        <fieldset className=''>
-          <Text as='legend' className=''>
+        <fieldset className="">
+          <Text as="legend" className="">
             Login
           </Text>
 
           <FormField
-            type='email'
-            name='email'
-            label={'Email Address'}
-            className=''
-            autoComplete='username'
+            type="email"
+            name="email"
+            label={"Email Address"}
+            className=""
+            autoComplete="username"
           />
 
           <FormField
-            name='password'
-            label={'Password'}
-            className=''
-            autoComplete='current-password'
+            type="password"
+            name="password"
+            label={"Password"}
+            className=""
+            autoComplete="current-password"
             isPassword
           />
 
-          <div className=''>
-            <button type='submit' disabled={!isSubmittable} className=''>
+          <div className="">
+            <button type="submit" disabled={!isSubmittable} className="">
               Login to your account
             </button>
           </div>
 
-          <div className=''>
+          <div className="">
             <Text>Don’t have an account?</Text>
-            <Link to='/register' className=''>
+            <Link to="/register" className="">
               Sign Up
             </Link>
           </div>

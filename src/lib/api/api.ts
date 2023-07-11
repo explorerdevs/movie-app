@@ -1,6 +1,6 @@
-import type { AxiosRequestConfig } from 'axios';
-import { client } from './client';
-import { CATEGORIES, MOVIE, TV_SERIES } from './config';
+import type { AxiosRequestConfig } from "axios";
+import { client } from "./client";
+import { CATEGORIES, MOVIE, TV_SERIES } from "./config";
 
 export const tmdbApi = {
   fetchMovies: (type: string, params: AxiosRequestConfig<any> | undefined) => {

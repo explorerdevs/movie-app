@@ -1,15 +1,27 @@
-import IconBookmarkEmptySVG from '@src/assets/icon-bookmark-empty.svg';
-import IconBookmarkFullSVG from '@src/assets/icon-bookmark-full.svg';
-import IconHomeSVG from '@src/assets/icon-nav-home.svg';
-import IconMovieSVG from '@src/assets/icon-nav-movies.svg';
-import IconTvSVG from '@src/assets/icon-nav-tv-series.svg';
-import LogoSVG from '@src/assets/logo.svg';
+import IconBookmarkEmptySVG from "@/assets/icon-bookmark-empty.svg";
+import IconBookmarkFullSVG from "@/assets/icon-bookmark-full.svg";
+import IconCategoryMovieSVG from "@/assets/icon-category-movie.svg";
+import IconCategoryTvSVG from "@/assets/icon-category-tv.svg";
+import IconNavBookmarkSVG from "@/assets/icon-nav-bookmark.svg";
+import IconNavHomeSVG from "@/assets/icon-nav-home.svg";
+import IconNavMovieSVG from "@/assets/icon-nav-movies.svg";
+import IconNavTvSVG from "@/assets/icon-nav-tv-series.svg";
+import IconPlaySVG from "@/assets/icon-play.svg";
+import IconSearchSVG from "@/assets/icon-search.svg";
+import AvatarPNG from "@/assets/image-avatar.png";
+import IconLogoSVG from "@/assets/logo.svg";
 
 export {
-  IconTvSVG,
+  AvatarPNG,
   IconBookmarkEmptySVG,
   IconBookmarkFullSVG,
-  LogoSVG,
-  IconMovieSVG,
-  IconHomeSVG,
+  IconCategoryMovieSVG,
+  IconCategoryTvSVG,
+  IconLogoSVG,
+  IconNavBookmarkSVG,
+  IconNavHomeSVG,
+  IconNavMovieSVG,
+  IconNavTvSVG,
+  IconPlaySVG,
+  IconSearchSVG,
 };

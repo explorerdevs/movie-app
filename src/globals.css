@@ -19,9 +19,10 @@ Version: 01
 @layer base {
   html {
     box-sizing: border-box;
-    font-size: 56.25%;
+    font-size: 60%;
     text-rendering: optimizeSpeed;
     text-size-adjust: none;
+    touch-action: manipulation;
   }
 
   @media (min-width: 75em) {
@@ -40,6 +41,7 @@ Version: 01
   *::after {
     margin: 0;
     padding: 0;
+    font: inherit;
     box-sizing: inherit;
   }
 
@@ -65,7 +67,7 @@ Version: 01
   }
 
   @media not all and (min-resolution: 0.001dpcm) {
-    :where(img[loading='lazy']) {
+    :where(img[loading="lazy"]) {
       clip-path: inset(0.5px);
     }
   }
@@ -107,7 +109,8 @@ Version: 01
 
   /*********** TYPOGRAPHY ************/
   :where(body) {
-    @apply font-sans bg-brand-900 text-300 text-white;
+    @apply bg-brand-900 font-sans;
+    line-height: 1.5;
   }
 }
 
