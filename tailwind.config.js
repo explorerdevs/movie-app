@@ -6,46 +6,26 @@ export default {
   darkMode: ["class", '[data-theme="dark"]'],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    aspectRatio: {
-      auto: "auto",
-      square: "1 / 1",
-      video: "16 / 9",
-      1: "1",
-      2: "2",
-      3: "3",
-      4: "4",
-      5: "5",
-      6: "6",
-      7: "7",
-      8: "8",
-      9: "9",
-      10: "10",
-      11: "11",
-      12: "12",
-      13: "13",
-      14: "14",
-      15: "15",
-      16: "16",
-    },
     borderRadius: {
       ...defaultTheme.borderRadius,
       pill: "100vmax",
+      brand: "0.8rem",
     },
 
     // screens: {
-    //   s: "20em", // => @media (min-width: 320px) { ... }
-    //   xs: "30em", // => @media (min-width: 480px) { ... }
-    //   sm: "36em", // => @media (min-width: 576px) { ... }
-    //   sx: "40em", // => @media (min-width: 640px) { ... }
-    //   md: "48em", // => @media (min-width: 768px) { ... }
-    //   lg: "64em", // => @media (min-width: 1024px) { ... }
-    //   xl: "80em", // => @media (min-width: 1280px) { ... }
-    //   xxl: "96em", // => @media (min-width: 1536px) { ... }
-    //   xxxl: "112.5em", // => @media (min-width: 1800px) { ... }
+    //   s: "20em", // @media (min-width: 320px) { ... }
+    //   xs: "30em", // @media (min-width: 480px) { ... }
+    //   sm: "36em", // @media (min-width: 576px) { ... }
+    //   sx: "40em", // @media (min-width: 640px) { ... }
+    //   md: "48em", // @media (min-width: 768px) { ... }
+    //   lg: "64em", // @media (min-width: 1024px) { ... }
+    //   xl: "80em", // @media (min-width: 1280px) { ... }
+    //   xxl: "96em", // @media (min-width: 1536px) { ... }
+    //   xxxl: "112.5em", // @media (min-width: 1800px) { ... }
     // },
 
     screens: {
-      xs: "30em", // => @media (min-width: 480px) { ... }
+      xs: "30em", // @media (min-width: 480px) { ... }
       ...defaultTheme.screens,
     },
 
@@ -66,14 +46,14 @@ export default {
       },
 
       screens: {
-        sm: "40em", // => @media (min-width: 640px) { ... }
-        md: "48em", // => @media (min-width: 768px) { ... }
-        lg: "64em", // => @media (min-width: 1024px) { ... }
-        xl: "80em", // => @media (min-width: 1280px) { ... }
-        "2xl": "96em", // => @media (min-width: 1536px) { ... }
+        sm: "40em", // @media (min-width: 640px) { ... }
+        md: "48em", // @media (min-width: 768px) { ... }
+        lg: "64em", // @media (min-width: 1024px) { ... }
+        xl: "80em", // @media (min-width: 1280px) { ... }
+        "2xl": "96em", // @media (min-width: 1536px) { ... }
       },
       fontFamily: {
-        sans: ["Outfit"],
+        sans: ["Outfit", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         100: "1rem",

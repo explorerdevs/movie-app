@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@/lib";
 
 const FormControl = <E extends React.ElementType = "div">({
   as,
@@ -10,7 +10,7 @@ const FormControl = <E extends React.ElementType = "div">({
 
   return (
     <RenderedElement
-      className={clsx("flex flex-col-reverse gap-4", className)}
+      className={cn("flex flex-col-reverse gap-4", className)}
       {...rest}
     >
       {children}

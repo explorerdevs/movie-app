@@ -12,11 +12,11 @@ const Providers = () => {
         defaultOptions: {
           queries: {
             // cacheTime: 1000 * 60 * 60 * 24, // 24 hours
-            staleTime: 1000 * 60 * 3, // 2 min
+            staleTime: 1000 * 60 * 10, // 10 min
             retry: 1,
             refetchOnMount: true,
             refetchOnReconnect: true,
-            refetchOnWindowFocus: true,
+            refetchOnWindowFocus: false,
           },
         },
       })

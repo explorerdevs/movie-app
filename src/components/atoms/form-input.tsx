@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@/lib";
 import { useFormContext } from "react-hook-form";
 
 interface Props
@@ -20,7 +20,7 @@ const FormInput = ({ name, className, type, ...rest }: Props) => {
       {...register(`${name}`, {
         valueAsNumber: type === "number" || undefined,
       })}
-      className={clsx("peer w-full border px-8 py-6 ", className)}
+      className={cn("peer w-full border px-8 py-6 ", className)}
       type={type}
       aria-invalid={errors?.[name] ? "true" : "false"}
       aria-errormessage={`errors-${name}`}
@@ -30,4 +30,4 @@ const FormInput = ({ name, className, type, ...rest }: Props) => {
 };
 export { FormInput };
 
-// 'body-100 peer w-full rounded-lg border border-brand-100 bg-neutral-100 px-8 py-6 font-bold text-brand-900 caret-brand-500 outline-none autofill:bg-neutral-100 focus:border-brand-500 aria-[invalid="true"]:!border-accent-200 aria-[invalid="true"]:!text-accent-200 focus:aria-[invalid="true"]:!border-accent-200 focus:aria-[invalid="true"]:!ring-accent-200 hover:border-brand-500 dark:border-brand-600 dark:bg-brand-700 dark:text-neutral-100 dark:autofill:bg-brand-700 dark:focus:border-brand-500 dark:hover:border-brand-500'
+// 'body-100 peer w-full rounded-lg border border-brand-100 bg-white px-8 py-6 font-bold text-brand-900 caret-brand-500 outline-none autofill:bg-white focus:border-brand-500 aria-[invalid="true"]:!border-accent-200 aria-[invalid="true"]:!text-accent-200 focus:aria-[invalid="true"]:!border-accent-200 focus:aria-[invalid="true"]:!ring-accent-200 hover:border-brand-500 dark:border-brand-600 dark:bg-brand-700 dark:text-white dark:autofill:bg-brand-700 dark:focus:border-brand-500 dark:hover:border-brand-500'

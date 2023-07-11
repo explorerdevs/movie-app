@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@/lib";
 import { useFormContext } from "react-hook-form";
 
 interface Props
@@ -25,7 +25,7 @@ const FormErrorText = ({
       role="alert"
       id={`errors-${id}`}
       aria-live="assertive"
-      className={clsx(
+      className={cn(
         "text-200 font-semibold leading-tight tracking-tighter",
         className
       )}

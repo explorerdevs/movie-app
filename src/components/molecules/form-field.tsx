@@ -1,5 +1,5 @@
+import { cn } from "@/lib";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/solid";
-import clsx from "clsx";
 import { useReducer } from "react";
 import { FormControl, FormErrorText, FormInput, FormLabel } from "../atoms";
 
@@ -35,7 +35,7 @@ const FormField = ({
   );
 
   return (
-    <FormControl as="div" className={clsx("relative", className)}>
+    <FormControl as="div" className={cn("relative", className)}>
       <FormInput
         type={isPassword && isPasswordShown ? "text" : type}
         name={name}
