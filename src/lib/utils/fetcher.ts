@@ -1,6 +1,6 @@
-export async function request(
+export async function request<T>(
   ...args: Parameters<typeof fetch>
-): Promise<unknown> {
+): Promise<T> {
   const response = await fetch(...args);
 
   if (!response.ok) {
