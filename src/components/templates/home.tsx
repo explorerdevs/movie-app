@@ -91,6 +91,8 @@ const HomeTemplate = () => {
         </ul>
       </section>
       {/* TRENDING MOVIES CAROUSEL */}
+      
+      {/*   style={{ '--min-column-size': '30rem' } as CSSCustomProperties} */}
       {/* RECOMMENDED MOVIES  */}
       {/* <ul>
         {movies?.map((movie) => {
@@ -175,6 +177,7 @@ const HomeTemplate = () => {
           })}
         </ul>
       </section>
+
     </>
   );
 };
