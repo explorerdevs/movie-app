@@ -91,21 +91,8 @@ const HomeTemplate = () => {
         </ul>
       </section>
       {/* TRENDING MOVIES CAROUSEL */}
-      {/* RECOMMENDED MOVIES  */}
-      {/* <ul>
-        {movies?.map((movie) => {
-          return (
-            <li key={movie.title}>
-              <article>
-                <img src={movie.thumbnail.regular.small} alt={movie.title} />
-                <Text as="h3">{movie.title}</Text>
-                <Text as="p">{movie.year}</Text>
-              </article>
-            </li>
-          );
-        })}
-      </ul> */}
-      {/* RECOMMENDED MOVIES  */}
+
+      {/*   style={{ '--min-column-size': '30rem' } as CSSCustomProperties} */}
     </>
   );
 };

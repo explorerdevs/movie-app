@@ -22,3 +22,7 @@ type ClassValue =
   | undefined;
 type ClassDictionary = Record<string, any>;
 type ClassArray = ClassValue[];
+
+interface CSSCustomProperties extends React.CSSProperties {
+  "--min-column-size": string;
+}

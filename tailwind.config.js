@@ -93,6 +93,11 @@ export default {
           width: "min(var(--mx-width),100% - (var(--padding) * 2))",
           marginInline: "auto",
         },
+        ".grid-auto-fit": {
+          "--min-column-size": "22rem",
+          gridTemplateColumns:
+            "repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr))",
+        },
       });
     }),
   ],

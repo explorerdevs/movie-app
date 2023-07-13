@@ -1,5 +1,5 @@
 import axios from "axios";
-import * as Qs from "qs";
+import { stringify } from "qs";
 
 export const client = axios.create({
   baseURL: import.meta.env.TMDB_BASE_URL,
@@ -7,7 +7,7 @@ export const client = axios.create({
     "Content-Type": "application/json",
   },
   paramsSerializer: function (params) {
-    return Qs.stringify(params, { arrayFormat: "brackets" });
+    return stringify(params, { arrayFormat: "brackets" });
   },
 });
 
