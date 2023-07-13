@@ -1,4 +1,4 @@
-import { icons } from "@/common";
+import { IconBookmarkEmptySVG, IconBookmarkFullSVG, icons } from "@/common";
 import { cn, removeFirstChar, request } from "@/lib";
 import { useEffect, useState } from "react";
 import { Text } from "../atoms";
@@ -91,8 +91,93 @@ const HomeTemplate = () => {
         </ul>
       </section>
       {/* TRENDING MOVIES CAROUSEL */}
-
+      
       {/*   style={{ '--min-column-size': '30rem' } as CSSCustomProperties} */}
+      {/* RECOMMENDED MOVIES  */}
+      {/* <ul>
+        {movies?.map((movie) => {
+          return (
+            <li key={movie.title}>
+              <article>
+                <img src={movie.thumbnail.regular.small} alt={movie.title} />
+                <Text as="h3">{movie.title}</Text>
+                <Text as="p">{movie.year}</Text>
+              </article>
+            </li>
+          );
+        })}
+      </ul> */}
+      {/* RECOMMENDED MOVIES  */}
+
+      {/*  */}
+      <section className="my-16 flex flex-col gap-12">
+        <Text as="h2" color="primary" size={"2xl"} weight={"light"}>
+          Recommended for you
+        </Text>
+
+        <ul
+          aria-label="Trending Movies"
+          className="grid grid-cols-[repeat(2,_minmax(290px,_1fr))] gap-16 md:grid-cols-[repeat(3,_minmax(290px,_1fr))] lg:grid-cols-[repeat(4,_minmax(290px,_1fr))]"
+        >
+          {movies.map((movie) => {
+            const Icon =
+              movie.category.toLocaleLowerCase() === "movie"
+                ? icons.category.movie
+                : icons.category.series;
+            return (
+              <li key={movie.title} className="relative rounded-xl">
+                <article className="flex flex-col gap-3">
+                  <img
+                    src={movie.thumbnail.regular.large}
+                    alt={movie.title}
+                    className="cursor-pointer rounded-xl"
+                  />
+                  <div className="flex flex-col">
+                    <div className="flex items-center gap-3">
+                      <Text
+                        as="time"
+                        dateTime={String(movie.year)}
+                        className="text-gray-400"
+                      >
+                        {movie.year}
+                      </Text>
+                      <Text as="p" className="mb-3 text-gray-400">
+                        .
+                      </Text>
+                      <Text as="p" className="flex items-baseline gap-2">
+                        <span>
+                          <Icon className="text-gray-400" />
+                        </span>
+                        <span className="text-gray-400">{movie.category}</span>
+                      </Text>
+                      <Text as="p" className="mb-3 text-gray-400">
+                        .
+                      </Text>
+                      <Text as="p" className="text-gray-400">
+                        {movie.rating}
+                      </Text>
+                    </div>
+                    <Text className="font-medium">{movie.title}</Text>
+                  </div>
+                  <div className="absolute right-5 top-5 rounded-full bg-gray-600/40">
+                    {movie.isBookmarked && (
+                      <div className="rounded-full p-4 text-white">
+                        <IconBookmarkFullSVG />
+                      </div>
+                    )}
+                    {!movie.isBookmarked && (
+                      <div className="rounded-full p-4 text-white">
+                        <IconBookmarkEmptySVG />
+                      </div>
+                    )}
+                  </div>
+                </article>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
     </>
   );
 };
