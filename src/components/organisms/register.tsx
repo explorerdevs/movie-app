@@ -1,4 +1,5 @@
 import { IconLogoSVG } from "@/common";
+import { IconLogoSVG } from "@/common";
 import { RHFSubmitHandler, RegisterFormSchema, useZodForm } from "@/lib";
 import { FormProvider } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -34,14 +35,14 @@ const RegisterForm = () => {
     Boolean(methods.formState.isDirty) && Boolean(methods.formState.isValid);
 
   return (
-    <div className="mx-0 mt-10 flex grow flex-col">
+    <div className="mx-0 mt-10 flex max-w-[30rem] grow flex-col">
       <IconLogoSVG className="m-auto mb-20" />
       <FormProvider {...methods}>
         <form
-          className="m-auto flex w-full max-w-[40rem] grow gap-10 rounded-2xl bg-brand-200 p-7"
+          className="m-auto flex w-full max-w-[40rem] grow gap-10 rounded-2xl bg-brand-200 p-7 lg:mt-40"
           onSubmit={methods.handleSubmit(onSubmit)}
         >
-          <fieldset className="">
+          <fieldset className="flex grow flex-col">
             <Text as="legend" className="mb-8 text-500">
               Sign Up
             </Text>
@@ -53,7 +54,22 @@ const RegisterForm = () => {
               className="py-0 text-100"
               autoComplete="username"
             />
+            <FormField
+              type="email"
+              name="email"
+              label={"Email Address"}
+              className="py-0 text-100"
+              autoComplete="username"
+            />
 
+            <FormField
+              type="password"
+              name="password"
+              label={"Password"}
+              className="col-span-6 py-3 text-100"
+              autoComplete="new-password"
+              isPassword
+            />
             <FormField
               type="password"
               name="password"
@@ -71,18 +87,26 @@ const RegisterForm = () => {
               autoComplete="new-password"
               isPassword
             />
+            <FormField
+              type="password"
+              name="countersign"
+              label={"Confirm Password"}
+              className="py-3 text-100"
+              autoComplete="new-password"
+              isPassword
+            />
 
             <div className="">
               <button
                 type="submit"
                 disabled={!isSubmittable}
-                className="mt-8 min-w-full rounded-md bg-accent-200 p-3 font-light text-neutral-100"
+                className="ease-in-outfocus:bg-accent-100 mt-8 min-w-full rounded-md bg-accent-200 p-3 font-light text-neutral-100 transition-colors duration-700 hover:bg-accent-100"
               >
                 Create an account
               </button>
             </div>
 
-            <div className="mt-8 flex justify-center gap-2">
+            <div className="mt-8 flex flex-wrap justify-center gap-2">
               <Text className="text-100 font-light">
                 Already have an account?
               </Text>
