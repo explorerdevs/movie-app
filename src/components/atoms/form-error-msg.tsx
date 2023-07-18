@@ -26,7 +26,7 @@ const FormErrorText = ({
       id={`errors-${id}`}
       aria-live="assertive"
       className={cn(
-        "text-200 font-semibold leading-tight tracking-tighter",
+        "text-100 font-light leading-tight tracking-tighter",
         className
       )}
       {...rest}
