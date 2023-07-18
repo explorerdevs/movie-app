@@ -1,5 +1,4 @@
 import { IconLogoSVG } from "@/common";
-import { IconLogoSVG } from "@/common";
 import { RHFSubmitHandler, RegisterFormSchema, useZodForm } from "@/lib";
 import { FormProvider } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -36,7 +35,8 @@ const RegisterForm = () => {
 
   return (
     <div className="mx-0 mt-10 flex max-w-[30rem] grow flex-col">
-      <IconLogoSVG className="m-auto mb-20" />
+      <div className="m-auto mb-20"><IconLogoSVG  /></div>
+      
       <FormProvider {...methods}>
         <form
           className="m-auto flex w-full max-w-[40rem] grow gap-10 rounded-2xl bg-brand-200 p-7 lg:mt-40"
@@ -54,13 +54,6 @@ const RegisterForm = () => {
               className="py-0 text-100"
               autoComplete="username"
             />
-            <FormField
-              type="email"
-              name="email"
-              label={"Email Address"}
-              className="py-0 text-100"
-              autoComplete="username"
-            />
 
             <FormField
               type="password"
@@ -70,23 +63,7 @@ const RegisterForm = () => {
               autoComplete="new-password"
               isPassword
             />
-            <FormField
-              type="password"
-              name="password"
-              label={"Password"}
-              className="col-span-6 py-3 text-100"
-              autoComplete="new-password"
-              isPassword
-            />
 
-            <FormField
-              type="password"
-              name="countersign"
-              label={"Confirm Password"}
-              className="py-3 text-100"
-              autoComplete="new-password"
-              isPassword
-            />
             <FormField
               type="password"
               name="countersign"

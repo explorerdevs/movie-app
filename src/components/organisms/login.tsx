@@ -34,8 +34,10 @@ const LoginForm = () => {
     Boolean(methods.formState.isDirty) && Boolean(methods.formState.isValid);
 
   return (
-    <div className="mx-0 flex grow flex-col mt-10">
-      <IconLogoSVG className="m-auto mb-10" />
+    <div className="mx-0 mt-10 flex grow flex-col">
+      <div className="m-auto mb-20">
+        <IconLogoSVG />
+      </div>
       <FormProvider {...methods}>
         <form
           className="m-auto flex w-full max-w-[40rem] grow gap-10 rounded-2xl bg-brand-200 p-7"
