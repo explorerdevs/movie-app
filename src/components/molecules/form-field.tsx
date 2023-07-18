@@ -9,7 +9,7 @@ interface Props
     HTMLInputElement
   > {
   name: string;
-  label: string;
+  label?: string;
   labelClassName?: string;
   inputClassName?: string;
   errorClassName?: string;
@@ -47,7 +47,7 @@ const FormField = ({
       />
 
       <div className='dark:text-brand-300 flex items-center justify-between text-brand-900 peer-aria-[invalid="true"]:!text-accent-200'>
-        <FormLabel htmlFor={name} className={labelClassName} children={label} />
+        {label && <FormLabel htmlFor={name} className={labelClassName} children={label} />}
         <FormErrorText id={name} className={errorClassName} />
       </div>
 

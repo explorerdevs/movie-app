@@ -51,17 +51,17 @@ const LoginForm = () => {
             <FormField
               type="email"
               name="email"
-              label={"Email Address"}
               className="py-0 text-100"
               autoComplete="username"
+              placeholder="Email Address"
             />
 
             <FormField
               type="password"
               name="password"
-              label={"Password"}
               className="py-3 text-100"
               autoComplete="current-password"
+              placeholder="Password"
               isPassword
             />
 
