@@ -21,7 +21,7 @@ const FormInput = ({ name, className, type, ...rest }: Props) => {
         valueAsNumber: type === "number" || undefined,
       })}
       className={cn(
-        "peer mb-4 max-h-4 w-full min-w-full border-b-brand-100 bg-brand-200 px-8 py-6 outline-none border-b autofill:!bg-brand-200 aria-[invalid='true']:!border-b-accent-200",
+        "peer mb-4 max-h-4 w-full min-w-full border-b border-b-brand-100 bg-brand-200 px-8 py-6 text-neutral-100 outline-none autofill:!bg-brand-200 aria-[invalid='true']:!border-b-accent-200",
         className
       )}
       type={type}

@@ -69,7 +69,7 @@ const LoginForm = () => {
               <button
                 type="submit"
                 disabled={!isSubmittable}
-                className="mt-8 min-w-full rounded-md bg-accent-200 p-3 font-light text-neutral-100"
+                className="mt-8 min-w-full cursor-pointer rounded-md bg-accent-200 p-3 font-light text-neutral-100 transition-colors duration-700  hover:bg-accent-100"
               >
                 Login to your account
               </button>
