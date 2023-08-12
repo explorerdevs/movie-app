@@ -51,17 +51,17 @@ const LoginForm = () => {
             <FormField
               type="email"
               name="email"
-              label={"Email Address"}
               className="py-0 text-100"
               autoComplete="username"
+              placeholder="Email Address"
             />
 
             <FormField
               type="password"
               name="password"
-              label={"Password"}
               className="py-3 text-100"
               autoComplete="current-password"
+              placeholder="Password"
               isPassword
             />
 
@@ -69,7 +69,7 @@ const LoginForm = () => {
               <button
                 type="submit"
                 disabled={!isSubmittable}
-                className="mt-8 min-w-full rounded-md bg-accent-200 p-3 font-light text-neutral-100"
+                className="mt-8 min-w-full cursor-pointer rounded-md bg-accent-200 p-3 font-light text-neutral-100 transition-colors duration-700  hover:bg-accent-100"
               >
                 Login to your account
               </button>

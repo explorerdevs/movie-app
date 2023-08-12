@@ -9,7 +9,7 @@ interface Props
     HTMLInputElement
   > {
   name: string;
-  label: string;
+  label?: string;
   labelClassName?: string;
   inputClassName?: string;
   errorClassName?: string;
@@ -47,7 +47,13 @@ const FormField = ({
       />
 
       <div className='dark:text-brand-300 flex items-center justify-between text-brand-900 peer-aria-[invalid="true"]:!text-accent-200'>
-        <FormLabel htmlFor={name} className={labelClassName} children={label} />
+        {label && (
+          <FormLabel
+            htmlFor={name}
+            className={labelClassName}
+            children={label}
+          />
+        )}
         <FormErrorText id={name} className={errorClassName} />
       </div>
 
@@ -58,9 +64,9 @@ const FormField = ({
           className="absolute right-0 top-[56%] mr-6"
         >
           {isPasswordShown ? (
-            <EyeSlashIcon className="text-brand-500 aspect-square w-7" />
+            <EyeSlashIcon className="text-brand-500 -mt-5 aspect-square w-7 text-neutral-500" />
           ) : (
-            <EyeIcon className="text-brand-500 aspect-square w-7" />
+            <EyeIcon className="text-brand-500 -mt-5 aspect-square w-7 text-neutral-500" />
           )}
           <span className="sr-only">View Password</span>
         </button>

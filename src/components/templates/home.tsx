@@ -91,25 +91,7 @@ const HomeTemplate = () => {
         </ul>
       </section>
       {/* TRENDING MOVIES CAROUSEL */}
-      
-      {/*   style={{ '--min-column-size': '30rem' } as CSSCustomProperties} */}
-      {/* RECOMMENDED MOVIES  */}
-      {/* <ul>
-        {movies?.map((movie) => {
-          return (
-            <li key={movie.title}>
-              <article>
-                <img src={movie.thumbnail.regular.small} alt={movie.title} />
-                <Text as="h3">{movie.title}</Text>
-                <Text as="p">{movie.year}</Text>
-              </article>
-            </li>
-          );
-        })}
-      </ul> */}
-      {/* RECOMMENDED MOVIES  */}
 
-      {/*  */}
       <section className="my-16 flex flex-col gap-12">
         <Text as="h2" color="primary" size={"2xl"} weight={"light"}>
           Recommended for you
@@ -117,7 +99,8 @@ const HomeTemplate = () => {
 
         <ul
           aria-label="Trending Movies"
-          className="grid grid-cols-[repeat(2,_minmax(290px,_1fr))] gap-16 md:grid-cols-[repeat(3,_minmax(290px,_1fr))] lg:grid-cols-[repeat(4,_minmax(290px,_1fr))]"
+          className="grid gap-16 grid-auto-fit"
+          style={{ "--min-column-size": "30rem" } as CSSCustomProperties}
         >
           {movies.map((movie) => {
             const Icon =
@@ -177,7 +160,6 @@ const HomeTemplate = () => {
           })}
         </ul>
       </section>
-
     </>
   );
 };

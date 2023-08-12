@@ -50,26 +50,26 @@ const RegisterForm = () => {
             <FormField
               type="email"
               name="email"
-              label={"Email Address"}
               className="py-0 text-100"
               autoComplete="username"
+              placeholder="Email Address"
             />
 
             <FormField
               type="password"
               name="password"
-              label={"Password"}
               className="col-span-6 py-3 text-100"
               autoComplete="new-password"
+              placeholder="Password"
               isPassword
             />
 
             <FormField
               type="password"
               name="countersign"
-              label={"Confirm Password"}
               className="py-3 text-100"
               autoComplete="new-password"
+              placeholder="Confirm Password"
               isPassword
             />
 
@@ -77,7 +77,7 @@ const RegisterForm = () => {
               <button
                 type="submit"
                 disabled={!isSubmittable}
-                className="ease-in-outfocus:bg-accent-100 mt-8 min-w-full rounded-md bg-accent-200 p-3 font-light text-neutral-100 transition-colors duration-700 hover:bg-accent-100"
+                className="ease-in-outfocus:bg-accent-100 mt-8 min-w-full rounded-md bg-accent-200 p-3 font-light text-neutral-100  cursor-pointer transition-colors duration-700 hover:bg-accent-100"
               >
                 Create an account
               </button>
