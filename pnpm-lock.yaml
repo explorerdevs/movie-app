@@ -57,7 +57,7 @@ devDependencies:
     version: 4.29.19(@tanstack/react-query@4.29.19)(react-dom@18.2.0)(react@18.2.0)
   '@types/node':
     specifier: ^20.4.1
-    version: 20.4.1
+    version: 20.5.9
   '@types/qs':
     specifier: ^6.9.7
     version: 6.9.7
@@ -135,7 +135,7 @@ devDependencies:
     version: 5.1.6
   vite:
     specifier: ^4.3.9
-    version: 4.3.9(@types/node@20.4.1)(sass@1.63.6)
+    version: 4.3.9(@types/node@20.5.9)(sass@1.63.6)
 
 packages:
 
@@ -2272,8 +2272,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node@20.4.1:
-    resolution: {integrity: sha512-JIzsAvJeA/5iY6Y/OxZbv1lUcc8dNSE77lb2gnBH+/PJ3lFR1Ccvgwl5JWnHAkNHcRsT0TbpVOsiMKZ1F/yyJg==}
+  /@types/node@20.5.9:
+    resolution: {integrity: sha512-PcGNd//40kHAS3sTlzKB9C9XL4K0sTup8nbG5lC14kzEteTNuAFh9u5nA0o5TWnSG2r/JNPRXFVcHJIIeRlmqQ==}
 
   /@types/parse-json@4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
@@ -2625,7 +2625,7 @@ packages:
       vite: ^4
     dependencies:
       '@swc/core': 1.3.61
-      vite: 4.3.9(@types/node@20.4.1)(sass@1.63.6)
+      vite: 4.3.9(@types/node@20.5.9)(sass@1.63.6)
     transitivePeerDependencies:
       - '@swc/helpers'
     dev: true
@@ -5394,13 +5394,13 @@ packages:
       '@rollup/pluginutils': 5.0.2
       '@svgr/core': 7.0.0
       '@svgr/plugin-jsx': 7.0.0
-      vite: 4.3.9(@types/node@20.4.1)(sass@1.63.6)
+      vite: 4.3.9(@types/node@20.5.9)(sass@1.63.6)
     transitivePeerDependencies:
       - rollup
       - supports-color
     dev: false
 
-  /vite@4.3.9(@types/node@20.4.1)(sass@1.63.6):
+  /vite@4.3.9(@types/node@20.5.9)(sass@1.63.6):
     resolution: {integrity: sha512-qsTNZjO9NoJNW7KnOrgYwczm0WctJ8m/yqYAMAK9Lxt4SoySUfS5S8ia9K7JHpa3KEeMfyF8LoJ3c5NeBJy6pg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -5425,7 +5425,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.4.1
+      '@types/node': 20.5.9
       esbuild: 0.17.19
       postcss: 8.4.25
       rollup: 3.26.0
