@@ -10,7 +10,7 @@ dependencies:
     version: 2.0.18(react@18.2.0)
   '@hookform/resolvers':
     specifier: ^3.1.1
-    version: 3.1.1(react-hook-form@7.45.1)
+    version: 3.3.4(react-hook-form@7.45.1)
   '@lukemorales/query-key-factory':
     specifier: ^1.2.0
     version: 1.2.0(@tanstack/query-core@4.29.19)
@@ -1825,8 +1825,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@hookform/resolvers@3.1.1(react-hook-form@7.45.1):
-    resolution: {integrity: sha512-tS16bAUkqjITNSvbJuO1x7MXbn7Oe8ZziDTJdA9mMvsoYthnOOiznOTGBYwbdlYBgU+tgpI/BtTU3paRbCuSlg==}
+  /@hookform/resolvers@3.3.4(react-hook-form@7.45.1):
+    resolution: {integrity: sha512-o5cgpGOuJYrd+iMKvkttOclgwRW86EsWJZZRC23prf0uU2i48Htq4PuT73AVb9ionFyZrwYEITuOFGF+BydEtQ==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
